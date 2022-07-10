@@ -6,8 +6,8 @@ function index() {
 
 	const randomNumber = randomNumberGenerator(100)
 	const randomOperator = operators[randomNumberGenerator(operators.length)]
-	const randomFirstOperand = randomNumberGenerator(10)
-	const randomSecondOperand = randomNumberGenerator(10)
+	const randomFirstOperand = randomNumberGenerator(100)
+	const randomSecondOperand = randomNumberGenerator(100)
 
 	const expressionResult = (randomOperator) => {
 		switch (randomOperator) {
@@ -22,6 +22,16 @@ function index() {
 		}
 	}
 
+	const gcdResult = (x, y) => {
+		if (y > x) {
+			return gcdResult(y, x)
+		}
+		if (!y) {
+			return x
+		}
+		return gcdResult(y, x % y)
+	}
+
 	const isEven = randomNumber % 2 === 0
 
 	return {
@@ -33,6 +43,7 @@ function index() {
 		randomSecondOperand,
 		isEven,
 		expressionResult,
+		gcdResult,
 	}
 }
 

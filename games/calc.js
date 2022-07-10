@@ -23,9 +23,7 @@ function calc() {
 		}
 	}
 	
-  if (attemps === 0) {
-    console.log(`Congratulations, ${userName}!`)
-  }
+	console.log(`Congratulations, ${userName}!`)
 }
 
 export default calc
