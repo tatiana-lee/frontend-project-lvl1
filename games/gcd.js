@@ -19,10 +19,9 @@ function gcd() {
 			console.log(
 				`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`
 			)
-			break
+			return
 		}
 	}
-	
   console.log(`Congratulations, ${userName}!`)
 }
 

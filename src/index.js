@@ -34,6 +34,8 @@ function index() {
 
 	const isEven = randomNumber % 2 === 0
 
+	
+
 	return {
 		attemps,
 		operators,

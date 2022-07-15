@@ -19,10 +19,9 @@ function calc() {
 			console.log(
 				`'${userAnswer}' is wrong answer ;(. Correct answer was '${expressionResult(randomOperator)}'.\nLet's try again, ${userName}!`
 			)
-			break
+			return
 		}
 	}
-	
 	console.log(`Congratulations, ${userName}!`)
 }
 

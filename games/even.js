@@ -24,7 +24,7 @@ function even() {
 			break
 		} else {
 			console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`)
-			break
+			return
 		}
 	}
 	
