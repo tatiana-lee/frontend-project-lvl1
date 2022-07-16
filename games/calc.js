@@ -1,43 +1,14 @@
-import readlineSync from 'readline-sync';
 import index from '../src/index.js';
 import cli from '../src/cli.js';
 import getCalc from '../src/getCalc.js';
+import checkCalc from '../src/checkCalc.js';
 
 function calc() {
-	let { attemps } = index();
-	const userName = cli();
-	console.log('What is the result of the expression?');
-	while (attemps > 0) {
-		const {
-			randomFirstOperand,
-			randomOperator,
-			randomSecondOperand,
-		} = index();
+  let { attemps } = index();
+  const userName = cli();
+  console.log('What is the result of the expression?');
 
-		console.log(
-			'Question:',
-			randomFirstOperand,
-			randomOperator,
-			randomSecondOperand
-		);
-		const userAnswer = readlineSync.question('Your answer: ');
-		const correctAnswer = getCalc(
-			randomOperator,
-			randomFirstOperand,
-			randomSecondOperand
-		);
-
-		if (+userAnswer === correctAnswer) {
-			console.log('Correct!');
-			attemps -= 1;
-		} else {
-			console.log(
-				`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`
-			);
-			return;
-		}
-	}
-	console.log(`Congratulations, ${userName}!`);
+  checkCalc(attemps, getCalc, userName);
 }
 
 export default calc;
