@@ -4,7 +4,7 @@ function makeProgression() {
 	const start = randomNumberGenerator(50);
 	const step = randomNumberGenerator(10);
 	const length = randomNumberGenerator(5) + 5;
-	const hidenEl = randomNumberGenerator(length);
+	const hidenEl = randomNumberGenerator(length) - 1;
 	const progr = () => {
 		const result = [];
 		let el = start;
