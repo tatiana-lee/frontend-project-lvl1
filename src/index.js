@@ -32,7 +32,7 @@ function index() {
 		return gcdResult(y, x % y)
 	}
 
-	const isEven = randomNumber % 2 === 0 ? 'yes' : 'no'
+	const isEven = (number) => number % 2 === 0
 
 	
 
