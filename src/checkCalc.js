@@ -3,13 +3,11 @@ import index from './index.js';
 
 function checkCalc(check, userName) {
   let { attemps } = index();
+
   while (attemps > 0) {
     const { randomFirstOperand, randomSecondOperand, randomOperator } = index();
     console.log(
-      'Question:',
-      randomFirstOperand,
-      randomOperator,
-      randomSecondOperand
+      `Question: ${randomFirstOperand} ${randomOperator} ${randomSecondOperand}`
     );
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = check(
