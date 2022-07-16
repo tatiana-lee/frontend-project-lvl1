@@ -3,11 +3,7 @@ function getCalc(a, b, operator) {
     case '+':
       return a + b;
     case '-':
-      if (a < b) {
-        return b - a;
-      } else {
-        return a - b;
-      };
+      return a - b;
     case '*':
       return a * b;
     default:
