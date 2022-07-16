@@ -4,33 +4,10 @@ function index() {
 	let attemps = 3;
 	const operators = ['+', '-', '*'];
 
-	const randomNumber = randomNumberGenerator(100);
-	const randomOperator = operators[randomNumberGenerator(operators.length) - 1];
+	const randomNumber = randomNumberGenerator(100) + 1;
+	const randomOperator = operators[randomNumberGenerator(operators.length)];
 	const randomFirstOperand = randomNumberGenerator(100);
-	const randomSecondOperand = randomNumberGenerator(100);
-
-	const expressionResult = (randomOperator) => {
-		switch (randomOperator) {
-			case '+':
-				return randomFirstOperand + randomSecondOperand;
-			case '-':
-				return randomFirstOperand - randomSecondOperand;
-			case '*':
-				return randomFirstOperand * randomSecondOperand;
-			default:
-				break;
-		}
-	};
-
-	const gcdResult = (x, y) => {
-		if (y > x) {
-			return gcdResult(y, x);
-		}
-		if (!y) {
-			return x;
-		}
-		return gcdResult(y, x % y);
-	};
+	const randomSecondOperand = randomNumberGenerator(50);
 
 	const isEven = (number) => number % 2 === 0;
 
@@ -42,8 +19,6 @@ function index() {
 		randomOperator,
 		randomSecondOperand,
 		isEven,
-		expressionResult,
-		gcdResult,
 	};
 }
 

@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import index from '../src/index.js';
 import cli from '../src/cli.js';
+import getCalc from '../src/getCalc.js';
 
 function calc() {
 	let { attemps } = index();
@@ -11,7 +12,6 @@ function calc() {
 			randomFirstOperand,
 			randomOperator,
 			randomSecondOperand,
-			expressionResult,
 		} = index();
 
 		console.log(
@@ -21,15 +21,18 @@ function calc() {
 			randomSecondOperand
 		);
 		const userAnswer = readlineSync.question('Your answer: ');
+		const correctAnswer = getCalc(
+			randomOperator,
+			randomFirstOperand,
+			randomSecondOperand
+		);
 
-		if (+userAnswer === expressionResult(randomOperator)) {
+		if (+userAnswer === correctAnswer) {
 			console.log('Correct!');
 			attemps -= 1;
 		} else {
 			console.log(
-				`'${userAnswer}' is wrong answer ;(. Correct answer was '${expressionResult(
-					randomOperator
-				)}'.\nLet's try again, ${userName}!`
+				`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`
 			);
 			return;
 		}

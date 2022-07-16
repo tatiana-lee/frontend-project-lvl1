@@ -2,9 +2,9 @@ import randomNumberGenerator from './randomNumberGenerator.js';
 
 function makeProgression() {
 	const start = randomNumberGenerator(50);
-	const step = randomNumberGenerator(10);
-	const length = randomNumberGenerator(5) + 5;
-	const hidenEl = randomNumberGenerator(length) - 1;
+	const step = randomNumberGenerator(10) + 1;
+	const length = randomNumberGenerator(5) + 6;
+	const hidenEl = randomNumberGenerator(length);
 	const progr = () => {
 		const result = [];
 		let el = start;
