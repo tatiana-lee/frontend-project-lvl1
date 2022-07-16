@@ -17,9 +17,8 @@ function gcd() {
       console.log('Correct!');
       attemps -= 1;
     } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`
-      );
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.
+Let's try again, ${userName}!`);
       return;
     }
   }

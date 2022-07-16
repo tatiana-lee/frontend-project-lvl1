@@ -9,7 +9,7 @@ function getCalc(a, b, operator) {
     default:
       break;
   }
-  
+  return;
 }
 
 export default getCalc;

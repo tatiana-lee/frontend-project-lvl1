@@ -1,7 +1,7 @@
 import randomNumberGenerator from './randomNumberGenerator.js';
 
 function index() {
-  let attemps = 3;
+  const attemps = 3;
   const operators = ['+', '-', '*'];
 
   const randomNumber = randomNumberGenerator(100) + 1;
