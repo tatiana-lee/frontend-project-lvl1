@@ -20,8 +20,7 @@ function makeProgression() {
   const array = progr();
   const copyArray = [...array];
   const getQuestionString = (arr) => {
-    arr[hidenEl] = '..';
-    return arr.join(' ');
+    return arr.map((e) => arr.indexOf(e) === hidenEl ? '..' : e).join(' ');
   };
   const question = getQuestionString(copyArray);
   const correctAnswer = array[hidenEl];

@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 import index from './index.js';
 
-function checkCalc(attemps, check, userName) {
+function checkCalc(check, userName) {
+  let { attemps } = index();
   while (attemps > 0) {
     const { randomFirstOperand, randomSecondOperand, randomOperator } = index();
     console.log(

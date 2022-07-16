@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 import index from './index.js';
 
-function yesOrNo(attemps, check, userName) {
+function yesOrNo(check, userName) {
+  let { attemps } = index();
   while (attemps > 0) {
     const { randomNumber } = index();
     console.log('Question:', randomNumber);
