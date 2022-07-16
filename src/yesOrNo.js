@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import index from '../src/index.js';
+import index from './index.js';
 
 function yesOrNo(attemps, check, userName) {
   while (attemps > 0) {

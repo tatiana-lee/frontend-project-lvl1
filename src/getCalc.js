@@ -7,7 +7,7 @@ function getCalc(a, b, operator) {
     case '*':
       return a * b;
     default:
-      break;
+      return;
   }
 }
 
