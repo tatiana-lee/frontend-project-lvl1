@@ -6,23 +6,20 @@ function checkCalc(check, userName) {
 
   while (attemps > 0) {
     const { randomFirstOperand, randomSecondOperand, randomOperator } = index();
-    console.log(
-      `Question: ${randomFirstOperand} ${randomOperator} ${randomSecondOperand}`
-    );
+    console.log(`Question: ${randomFirstOperand} ${randomOperator} ${randomSecondOperand}`);
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = check(
       randomFirstOperand,
       randomSecondOperand,
-      randomOperator
+      randomOperator,
     );
 
     if (+userAnswer === correctAnswer) {
       console.log('Correct!');
       attemps -= 1;
     } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`
-      );
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
+Let's try again, ${userName}!`);
       return;
     }
   }

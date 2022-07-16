@@ -3,13 +3,16 @@ function getCalc(a, b, operator) {
     case '+':
       return a + b;
     case '-':
-      return a - b;
+      if (a < b) {
+        return b - a;
+      } else {
+        return a - b;
+      };
     case '*':
       return a * b;
     default:
       break;
   }
-  return;
 }
 
 export default getCalc;
