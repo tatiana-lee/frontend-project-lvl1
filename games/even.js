@@ -10,20 +10,13 @@ function even() {
 		const { randomNumber, isEven } = index()
 		console.log('Question:', randomNumber)
 		const userAnswer = readlineSync.question('Your answer: ')
+		const correctAnswer = isEven
 
-		if (
-			(userAnswer === 'yes' && isEven) ||
-			(userAnswer === 'no' && !isEven)
-		) {
+		if (userAnswer === correctAnswer) {
 			console.log('Correct!')
 			attemps -= 1
-		} else if (userAnswer === 'no' && isEven) {
-			console.log(
-				`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`
-			)
-			return
 		} else {
-			console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`)
+			console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`)
 			return
 		}
 	}
