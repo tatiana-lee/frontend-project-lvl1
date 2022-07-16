@@ -5,7 +5,7 @@ function index() {
 	const operators = ['+', '-', '*']
 
 	const randomNumber = randomNumberGenerator(100)
-	const randomOperator = operators[randomNumberGenerator(operators.length)]
+	const randomOperator = operators[randomNumberGenerator(operators.length) - 1]
 	const randomFirstOperand = randomNumberGenerator(100)
 	const randomSecondOperand = randomNumberGenerator(100)
 
