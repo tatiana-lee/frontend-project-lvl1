@@ -1,40 +1,38 @@
-import randomNumberGenerator from './randomNumberGenerator.js'
+import randomNumberGenerator from './randomNumberGenerator.js';
 
 function index() {
-	let attemps = 3
-	const operators = ['+', '-', '*']
+	let attemps = 3;
+	const operators = ['+', '-', '*'];
 
-	const randomNumber = randomNumberGenerator(100)
-	const randomOperator = operators[randomNumberGenerator(operators.length) - 1]
-	const randomFirstOperand = randomNumberGenerator(100)
-	const randomSecondOperand = randomNumberGenerator(100)
+	const randomNumber = randomNumberGenerator(100);
+	const randomOperator = operators[randomNumberGenerator(operators.length) - 1];
+	const randomFirstOperand = randomNumberGenerator(100);
+	const randomSecondOperand = randomNumberGenerator(100);
 
 	const expressionResult = (randomOperator) => {
 		switch (randomOperator) {
 			case '+':
-				return randomFirstOperand + randomSecondOperand
+				return randomFirstOperand + randomSecondOperand;
 			case '-':
-				return randomFirstOperand - randomSecondOperand
+				return randomFirstOperand - randomSecondOperand;
 			case '*':
-				return randomFirstOperand * randomSecondOperand
+				return randomFirstOperand * randomSecondOperand;
 			default:
-				break
+				break;
 		}
-	}
+	};
 
 	const gcdResult = (x, y) => {
 		if (y > x) {
-			return gcdResult(y, x)
+			return gcdResult(y, x);
 		}
 		if (!y) {
-			return x
+			return x;
 		}
-		return gcdResult(y, x % y)
-	}
+		return gcdResult(y, x % y);
+	};
 
-	const isEven = (number) => number % 2 === 0
-
-	
+	const isEven = (number) => number % 2 === 0;
 
 	return {
 		attemps,
@@ -46,7 +44,7 @@ function index() {
 		isEven,
 		expressionResult,
 		gcdResult,
-	}
+	};
 }
 
-export default index
+export default index;
