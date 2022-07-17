@@ -1,4 +1,4 @@
-function getCalc(a, b, operator) {
+const getCalc = (a, b, operator) => {
   switch (operator) {
     case '+':
       return a + b;
@@ -10,6 +10,6 @@ function getCalc(a, b, operator) {
       break;
   }
   return '';
-}
+};
 
 export default getCalc;

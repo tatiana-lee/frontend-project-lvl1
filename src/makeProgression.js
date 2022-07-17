@@ -1,6 +1,6 @@
 import randomNumberGenerator from './randomNumberGenerator.js';
 
-function makeProgression() {
+const makeProgression = () => {
   const start = randomNumberGenerator(50);
   const step = randomNumberGenerator(10) + 1;
   const length = randomNumberGenerator(5) + 6;
@@ -24,12 +24,10 @@ function makeProgression() {
     return copyArray.join(' ');
   };
 
-  const question = getQuestionString(array);
+  const showQuestion = getQuestionString(array);
   const correctAnswer = array[hidenEl];
 
-  const getProgressionResult = (answer) => +answer === array[hidenEl];
-
-  return [correctAnswer, question, getProgressionResult];
+  return [correctAnswer, showQuestion];
 }
 
 export default makeProgression;
