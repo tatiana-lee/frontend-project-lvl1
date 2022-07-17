@@ -28,6 +28,6 @@ const makeProgression = () => {
   const correctAnswer = array[hidenEl];
 
   return [correctAnswer, showQuestion];
-}
+};
 
 export default makeProgression;
